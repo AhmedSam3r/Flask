@@ -1,0 +1,14 @@
+site.db is a database file
+to create it follow the following steps
+>go to cmd
+>>python
+>>from filename import databaseVariableName
+>>databaseVariableName.create_all()
+Now,you should find the file in the specified directory
+to create users and posts
+>>user_1=User(username='Ahmed',email='ah@gmail.com',password='pass123')
+>> db.session.add(user_1)
+>>user_2=User(username='Assal',email='as@gmail.com',password='123456')
+>> db.session.add(user_2)
+>>post_1=Post(title='New topic',content='Trending PL are',user_id=user_1.id)
+>>post_2=Post(title='Newer topic',content='Trending technologies are',user_id=user_1.id)
