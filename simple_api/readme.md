@@ -11,24 +11,24 @@ for example if local database:
 	replace portNumber with your database portNumber(eg. 8080)
 *after creating and connect our database<br>
 *open simple_api directory in your python IDE<br>
-*In terminal:
-	>> python
-	>> from app import db
-	>> db.create_all()
-now our database is connected and created with our User, Account classes
-	>> user1 = User(email="blabla@gmail.com)
-	>> user2 = User(email="blabla22@gmail.com)
-	>> db.session.add(user1)
-	>> db.session.add(user2)
-	>>db.session.commit()
-now user1 and user2 are add to our database
-	>> account1 = Account(balance = 1000, currency = 'EGP', user_id_fk = user1.user_id)
-	>> account2 = Account(balance = 2200, currency = 'EGP', user_id_fk = user2.user_id)
-	>> db.session.add(user1)
-	>> db.session.add(user2)
-	>>db.session.commit()
-now account1 and account2 are created and linked to their owners
-
+*In terminal:<br>
+	>> python<br>
+	>> from app import db<br>
+	>> db.create_all()<br>
+now our database is connected and created with our User, Account classes<br>
+	>> user1 = User(email="blabla@gmail.com)<br>
+	>> user2 = User(email="blabla22@gmail.com)<br>
+	>> db.session.add(user1)<br>
+	>> db.session.add(user2)<br>
+	>>db.session.commit()<br>
+now user1 and user2 are add to our database<br>
+	>> account1 = Account(balance = 1000, currency = 'EGP', user_id_fk = user1.user_id)<br>
+	>> account2 = Account(balance = 2200, currency = 'EGP', user_id_fk = user2.user_id)<br>
+	>> db.session.add(user1)<br>
+	>> db.session.add(user2)<br>
+	>>db.session.commit()<br>
+now account1 and account2 are created and linked to their owners<br>
+<br>
 ******for balance api******
 our json will be
 for example
@@ -41,6 +41,7 @@ it will return json object with all accounts and their balance
 	(account_id as uuid : account_balance),
 	so on ...
 }
+<br>
 
 ******for transfer api******
 {
