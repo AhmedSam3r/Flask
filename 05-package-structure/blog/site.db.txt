@@ -1,0 +1,6 @@
+Open CMD
+>>cd yourDirectoryPath
+>>python
+>>from blog import db
+>>from blog.models import User,Post
+>>> db.create_all()

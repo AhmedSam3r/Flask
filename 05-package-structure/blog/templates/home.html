@@ -1,0 +1,29 @@
+<!--we got rid of everything except body content
+now we're template inheriting -->
+{%extends "layout.html" %}
+{%block content%}
+        {% for post in posts %}
+            <h1>{{ post.title }} </h1>
+            <p>By {{post.author}} on {{post.date_posted}}</p>
+            <p>{{post.content}}</p>
+        {% endfor %}
+{% endblock content %}
+
+<!--
+<!DOCTYPE html>
+<html>
+S
+<head>
+    {% if title %}
+        <title>Flask Blog-{{title}}</title>
+    {% else %}
+        <title>Flask Blog</title>
+    {% endif %}
+</head>
+
+<body>
+
+</body>
+
+</html>
+-->

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    
+    {% if title %}
+            <title>Flask Blog-{{title}}</title>
+    {% else %}
+            <title>Flask Blog</title>
+    {% endif %}
+
+</head>
+
+<body>
+    <header class="site-header">
+      {% block content %}{% endblock %}          
+    </header>
+  
+  
+    
+
+</body>
+
+</html>
