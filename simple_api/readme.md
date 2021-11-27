@@ -1,6 +1,6 @@
-*You must have python3 pre-installed
-*pip3 requirements.txt
-*connect Class User,Account to a postgress database
+*You must have python3 pre-installed<br>
+*pip3 requirements.txt<br>
+*connect Class User,Account to a postgress database<br>
 for example if local database:
 
 	create database for our api called banking
@@ -9,8 +9,8 @@ for example if local database:
 	replace databasePassword with your database password
 	replace portName with your database portName (eg.localhost)
 	replace portNumber with your database portNumber(eg. 8080)
-*after creating and connect our database
-*open simple_api directory in your python IDE
+*after creating and connect our database<br>
+*open simple_api directory in your python IDE<br>
 *In terminal:
 	>> python
 	>> from app import db
