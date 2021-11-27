@@ -12,10 +12,11 @@ for example if local database:
 *after creating and connect our database<br>
 *open simple_api directory in your python IDE<br>
 *In terminal:<br>
-	python<br>
+
+	python
 	
-		from app import db<br>
-		db.create_all()<br>
+		from app import db
+		db.create_all()
 now our database is connected and created with our User, Account classes<br>
 
 	user1 = User(email="blabla@gmail.com)
