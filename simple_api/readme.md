@@ -13,15 +13,18 @@ for example if local database:
 *open simple_api directory in your python IDE<br>
 *In terminal:<br>
 	python<br>
+	
 		from app import db<br>
 		db.create_all()<br>
 now our database is connected and created with our User, Account classes<br>
+
 	user1 = User(email="blabla@gmail.com)<br>
 	user2 = User(email="blabla22@gmail.com)<br>
 	db.session.add(user1)<br>
 	db.session.add(user2)<br>
 	db.session.commit()<br>
 now user1 and user2 are add to our database<br>
+
 	account1 = Account(balance = 1000, currency = 'EGP', user_id_fk = user1.user_id)<br>
 	account2 = Account(balance = 2200, currency = 'EGP', user_id_fk = user2.user_id)<br>
 	db.session.add(user1)<br>
@@ -35,6 +38,7 @@ for example
 {
     "user_id" : "c5afe505-7584-4040-bb17-5eef24e3309c"
 }<br>
+
 where key is "user_id" and value is uuid value from our database accompanied to user_id column values<br>
 it will return json object with all accounts and their balance
 {
