@@ -12,21 +12,21 @@ for example if local database:
 *after creating and connect our database<br>
 *open simple_api directory in your python IDE<br>
 *In terminal:<br>
-	>> python<br>
-	>> from app import db<br>
-	>> db.create_all()<br>
+	python<br>
+		from app import db<br>
+		db.create_all()<br>
 now our database is connected and created with our User, Account classes<br>
-	>> user1 = User(email="blabla@gmail.com)<br>
-	>> user2 = User(email="blabla22@gmail.com)<br>
-	>> db.session.add(user1)<br>
-	>> db.session.add(user2)<br>
-	>>db.session.commit()<br>
+	user1 = User(email="blabla@gmail.com)<br>
+	user2 = User(email="blabla22@gmail.com)<br>
+	db.session.add(user1)<br>
+	db.session.add(user2)<br>
+	db.session.commit()<br>
 now user1 and user2 are add to our database<br>
-	>> account1 = Account(balance = 1000, currency = 'EGP', user_id_fk = user1.user_id)<br>
-	>> account2 = Account(balance = 2200, currency = 'EGP', user_id_fk = user2.user_id)<br>
-	>> db.session.add(user1)<br>
-	>> db.session.add(user2)<br>
-	>>db.session.commit()<br>
+	account1 = Account(balance = 1000, currency = 'EGP', user_id_fk = user1.user_id)<br>
+	account2 = Account(balance = 2200, currency = 'EGP', user_id_fk = user2.user_id)<br>
+	db.session.add(user1)<br>
+	db.session.add(user2)<br>
+	db.session.commit()<br>
 now account1 and account2 are created and linked to their owners<br>
 <br>
 ******for balance api******
@@ -34,8 +34,8 @@ our json will be
 for example
 {
     "user_id" : "c5afe505-7584-4040-bb17-5eef24e3309c"
-}
-where key is "user_id" and value is uuid value from our database accompanied to user_id column values
+}<br>
+where key is "user_id" and value is uuid value from our database accompanied to user_id column values<br>
 it will return json object with all accounts and their balance
 {
 	(account_id as uuid : account_balance),
@@ -45,11 +45,11 @@ it will return json object with all accounts and their balance
 
 ******for transfer api******
 {
-    "src_id" : account_id from Account class
-    "dst_id" : account_id from Account class,
-    "amount" : number,
-    "currency": "EGP" or "USD"
+    "src_id" : account_id from Account class,<br>
+    "dst_id" : account_id from Account class,<br>
+    "amount" : number,<br>
+    "currency": "EGP" or "USD"<br>
 }
-I added basic authentication to add more security despite its vulnerability
+I added basic authentication to add more security despite its vulnerability<br>
 username : ahmed 
 password : ahmedahmed
